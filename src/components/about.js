@@ -14,20 +14,24 @@ const StyledSection = styled.section`
   }
 `
 
-const About = () => {
-  return (
-    <StyledSection id="About">
-      <h1 className="title">
-        Hello <span role="img" aria-label="emoji">👋</span><br />
-        I'm Will
-      </h1>
-      <h2 className="subtitle">
-        I design and build <span className="highlighted">Full Stack Applications</span>.
-      </h2>
-      <div className="description">
-        JavaScript, React, Node.js, Express, Mongo.DB
-      </div>
-    </StyledSection>
+const About = ({ content }) => {
+    const {frontmatter, rawMarkdownBody} = content
+    return (
+    <StyledSection id="hero">
+    <h1 className="title">
+      {frontmatter.greetings}{" "}
+      <span role="img" aria-label="emoji">
+        {frontmatter.emoji}
+      </span>
+      <br />
+      {frontmatter.title}
+    </h1>
+    <h2 className="subtitle">
+      {frontmatter.subtitlePrefix}{" "}
+      <span className="highlighted">{frontmatter.subtitleHighlight}</span>
+    </h2>
+    <div className="description">{rawMarkdownBody}</div>
+  </StyledSection>
   )
 }
 
