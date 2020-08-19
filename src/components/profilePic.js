@@ -21,10 +21,12 @@ query MyQuery {
   }
 `  
 
-    )
+
+)
+console.log(data.file.childImageSharp.fluid)
     return (
         <Img fluid={data.file.childImageSharp.fluid}
-        alt="A corgi smiling happily"></Img>
+        alt="Profile Pic"></Img>
     )
 }
 
