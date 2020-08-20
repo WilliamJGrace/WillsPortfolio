@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
+import Masonry from 'react-masonry-component'
+import Project from './Project'
+
 
 
 const Grid = styled.div`
@@ -19,10 +22,11 @@ background: blue
 
 const ProjectGrid = ({content}) => {
     const {frontmatter, rawMarkdownBody} = content
+    console.log(frontmatter)
     return (
         <>
         <Grid>
-            <Col>{console.log(frontmatter)}</Col>
+            <Col><Project data={frontmatter}/></Col>
             <Col><h1>gi</h1></Col>
             <Col><h1>hello</h1></Col>
         </Grid>

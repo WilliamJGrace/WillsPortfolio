@@ -5,10 +5,9 @@ import Layout from '../components/layout'
 import ProjectGrid from '../components/ProjectGrid'
 
 const Projects = ({data}) => {
-    console.log(data)
     return (
      <Layout>
-         <ProjectGrid content={data.about.edges[1].node}>
+         <ProjectGrid content={data.about.edges[0].node}>
 
          </ProjectGrid>
     </Layout>
