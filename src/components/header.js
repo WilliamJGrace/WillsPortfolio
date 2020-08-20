@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
   padding: 0 2.5rem;
   background: black;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 `
 
@@ -19,12 +19,20 @@ const StyledLogo = styled.div`
   color: white;
 `
 
+const StyledLink = styled.div`
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  
+`
+
 const Header = () => {
   return (
     <StyledHeader>
       <Link to="/" aria-label="home">
         <StyledLogo>Will Grace.</StyledLogo>
       </Link>
+        <StyledLink><Link to="/projects/">Projects.</Link></StyledLink>
     </StyledHeader>
   )
 }
