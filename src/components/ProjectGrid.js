@@ -17,11 +17,12 @@ background: blue
 `
 
 
-const ProjectGrid = () => {
+const ProjectGrid = ({content}) => {
+    const {frontmatter, rawMarkdownBody} = content
     return (
         <>
         <Grid>
-            <Col><h1>hi</h1></Col>
+            <Col>{console.log(frontmatter)}</Col>
             <Col><h1>gi</h1></Col>
             <Col><h1>hello</h1></Col>
         </Grid>

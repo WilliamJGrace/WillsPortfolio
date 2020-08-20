@@ -5,16 +5,17 @@ import Layout from '../components/layout'
 import ProjectGrid from '../components/ProjectGrid'
 
 const Projects = ({data}) => {
+    console.log(data)
     return (
      <Layout>
-         <ProjectGrid content={data.about.edges[0].node}>
+         <ProjectGrid content={data.about.edges[1].node}>
 
          </ProjectGrid>
     </Layout>
     )
   }
 
-  export const pageQuery = graphql`
+export const pageQuery = graphql`
   {
     about: allMarkdownRemark {
       edges {
@@ -23,7 +24,7 @@ const Projects = ({data}) => {
             Title
             Description
             Githublink
-            DemoLink
+            Demolink
             
           }
           rawMarkdownBody
@@ -32,6 +33,7 @@ const Projects = ({data}) => {
     }
   }
 `
+
 
   
 export default Projects
