@@ -4,6 +4,18 @@ import Layout from '../components/layout'
 import About from '../components/about'
 import ProfilePic from '../components/profilePic'
 
+
+
+const IndexPage = ({data}) => {
+  return (
+    <Layout>
+      <About content={data.about.edges[0].node} />
+      <ProfilePic/>
+    </Layout>
+  
+  )
+}
+
 export const pageQuery = graphql`
   {
     about: allMarkdownRemark {
@@ -22,15 +34,5 @@ export const pageQuery = graphql`
     }
   }
 `
-
-const IndexPage = ({data}) => {
-  return (
-    <Layout>
-      <About content={data.about.edges[0].node} />
-      <ProfilePic/>
-    </Layout>
-  
-  )
-}
 
 export default IndexPage

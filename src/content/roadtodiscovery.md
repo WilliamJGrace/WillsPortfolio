@@ -1,7 +1,7 @@
 ---
-Title: "Road-To-Disov"
-Description: "👋"
-Githublink: "I'm Will Grace"
-Demolink: "I build and design "
+Title: "Road-To-Disovery"
+Description: "A playlist Generator Application"
+Githublink: "https://github.com/Team-react/Playlist_App"
+Demolink: "https://road-to-discovery.herokuapp.com/"
 ---
 
