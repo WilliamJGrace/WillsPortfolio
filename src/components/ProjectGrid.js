@@ -1,15 +1,19 @@
 import React from 'react'
 import styled from "styled-components"
 
+
 const Grid = styled.div`
 display: flex;
-justify-content: space-between
+justify-content: space-between;
+margin: 25px;
+
 `
 
 const Col = styled.div`
 width: 32%;
 color: white;
 background: blue
+
 `
 
 
