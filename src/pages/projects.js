@@ -7,7 +7,7 @@ import ProjectGrid from '../components/ProjectGrid'
 const Projects = ({data}) => {
     return (
      <Layout>
-         <ProjectGrid content={data.about.edges[0].node}>
+         <ProjectGrid content={data}>
 
          </ProjectGrid>
     </Layout>
@@ -15,23 +15,23 @@ const Projects = ({data}) => {
   }
 
 export const pageQuery = graphql`
-  {
-    about: allMarkdownRemark {
+{
+    allMarkdownRemark {
       edges {
-        node {
+        next {
+          id
           frontmatter {
             Title
             Description
             Githublink
             Demolink
-            
           }
-          rawMarkdownBody
         }
       }
     }
   }
 `
+  
 
 
   
