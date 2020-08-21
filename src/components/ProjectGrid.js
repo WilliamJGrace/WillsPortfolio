@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import Masonry from 'react-masonry-component'
+import './ProjectGrid.css'
 import Project from './Project'
 import { Link } from 'gatsby'
 
@@ -20,6 +21,15 @@ background: blue
 
 `
 
+const style = {
+    maxWidth: '70%',
+    textAlign: 'center',
+}
+
+const styleForProject = {
+    borderStyle: 'solid'
+}
+
 
 
 const ProjectGrid = ({content}) => {
@@ -37,7 +47,8 @@ const ProjectGrid = ({content}) => {
 
     return (
         <>
-        <Masonry className="showcase">
+        <Masonry className="showcase"
+        style={style}>
             {projectsWithoutNull.map((project) => (
                 <div className="showcase__item">
                 <figure className="card">
