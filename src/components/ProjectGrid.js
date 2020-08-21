@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import Masonry from 'react-masonry-component'
 import Project from './Project'
+import { Link } from 'gatsby'
 
 
 
@@ -36,7 +37,32 @@ const ProjectGrid = ({content}) => {
 
     return (
         <>
-        <Grid>
+        <Masonry className="showcase">
+            {projectsWithoutNull.map((project) => (
+                <div className="showcase__item">
+                <figure className="card">
+                  <figcaption className="card__caption">
+                    <h2 className="card__title">
+                        {project.next.frontmatter.Title}
+                    </h2>
+                    <div className="card__description">
+                      <p>{project.next.frontmatter.Description}</p>
+                    </div>
+                    <button className="card__githublink">
+                    <Link to={project.next.frontmatter.Githublink}>Github</Link>
+                    </button>
+                    <button className="card__githublink">
+                    <Link to={project.next.frontmatter.Demo}>Demo</Link>
+                    </button>
+
+    
+                  </figcaption>
+                </figure>
+              </div>
+              ))}
+
+        </Masonry>
+        {/* <Grid>
             {projectsWithoutNull.map(project => (
                 
                 <Col><Project project={project}></Project></Col>
@@ -47,7 +73,7 @@ const ProjectGrid = ({content}) => {
                <Col><h1>hi</h1></Col>
                <Col><h1>gi</h1></Col>
                <Col><h1>hello</h1></Col>
-           </Grid>
+           </Grid> */}
 </>
     )
 }
