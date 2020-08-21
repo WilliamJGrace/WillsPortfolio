@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
 import Masonry from 'react-masonry-component'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from "gatsby-image"
 import './ProjectGrid.css'
 import Project from './Project'
 import { Link } from 'gatsby'
@@ -44,6 +46,21 @@ const ProjectGrid = ({content}) => {
         }
 
     }
+    const data = useStaticQuery(graphql`
+    query MyQuery {
+        file(relativePath: {eq: "roadtodiscovery.png"}) {
+          childImageSharp {
+            fluid {
+              aspectRatio
+              base64
+              sizes
+              src
+            }
+          }
+        }
+      }
+    `  
+    )
 
     return (
         <>
@@ -59,6 +76,8 @@ const ProjectGrid = ({content}) => {
                     <div className="card__description">
                       <p>{project.next.frontmatter.Description}</p>
                     </div>
+                    <Img fluid={data.file.childImageSharp.fluid}
+                    alt="A corgi smiling happily"></Img>
                     <button className="card__githublink">
                     <Link to={project.next.frontmatter.Githublink}>Github</Link>
                     </button>
@@ -87,6 +106,6 @@ const ProjectGrid = ({content}) => {
            </Grid> */}
 </>
     )
+    
 }
-
 export default ProjectGrid
