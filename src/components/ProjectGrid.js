@@ -18,22 +18,12 @@ color: white;
 background: blue
 
 `
-const removeEmpty = (obj) => {
-    Object.keys(obj).forEach(key =>
-      (obj[key] && typeof obj[key] === 'object') && removeEmpty(obj[key]) ||
-      (obj[key] === undefined || obj[key] === null) && delete obj[key]
-    );
-    return obj;
-  };
+
 
 
 const ProjectGrid = ({content}) => {
     let projects = content.allMarkdownRemark.edges
-    // projects = projects.map((project) => {
-    //     if(project.next === null){
-    //         return
-    //     }
-    // })
+   
     let projectsWithoutNull = []
 
     for(var i=0;i<projects.length;i++){
@@ -44,10 +34,6 @@ const ProjectGrid = ({content}) => {
 
     }
 
-
-    
-
-    console.log(projectsWithoutNull)
     return (
         <>
         <Grid>

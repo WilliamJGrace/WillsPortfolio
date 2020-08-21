@@ -11,7 +11,6 @@ const ProjectContainer = styled.div`
 
 
 const Project = (data) => {
-    console.log(data.project)
     if(data.project.next === null){
         return null
     }
