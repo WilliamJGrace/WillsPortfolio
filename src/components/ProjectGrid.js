@@ -24,13 +24,12 @@ background: blue
 `
 
 const style = {
-    maxWidth: '70%',
     textAlign: 'center',
+    columnWidth: 100,
+
 }
 
-const styleForProject = {
-    borderStyle: 'solid'
-}
+
 
 
 
@@ -82,7 +81,7 @@ const ProjectGrid = ({content}) => {
                     <Link to={project.next.frontmatter.Githublink}>Github</Link>
                     </button>
                     <button className="card__githublink">
-                    <Link to={project.next.frontmatter.Demo}>Demo</Link>
+                    <Link to={project.next.frontmatter.Demolink}>Demo</Link>
                     </button>
 
     
