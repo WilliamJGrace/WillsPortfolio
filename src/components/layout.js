@@ -21,10 +21,7 @@ const StyledLayout = styled.div`
   }
 `
 
-const Seperator = styled.div`
-height: 20px;
 
-`
 
 
 const Layout = ({ children }) => {
@@ -32,9 +29,7 @@ const Layout = ({ children }) => {
     <StyledLayout>
       <GlobalStyle />
       <Header />
-      <Seperator/>
       <main id="main-content">{children}</main>
-      <Seperator/>
 
       <Footer />
     </StyledLayout>
