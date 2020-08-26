@@ -1,6 +1,16 @@
 import React from 'react'
-import styled from "styled-components"
-import Masonry from 'react-masonry-component'
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import styled from 'styled-components'
+
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import './ProjectGrid.css'
@@ -9,26 +19,28 @@ import { Link } from 'gatsby'
 
 
 
-const Grid = styled.div`
-display: flex;
-justify-content: space-between;
-margin: 25px;
+const useStyles = makeStyles((theme) => ({
+  icon: {
+    marginRight: theme.spacing(2),
+  },
 
-`
-
-const Col = styled.div`
-width: 32%;
-color: white;
-background: blue
-
-`
-
-const style = {
-    textAlign: 'center',
-    columnWidth: 100,
-
-}
-
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+  card: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  cardMedia: {
+    paddingTop: '56.25%', // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+  
+}));
 
 
 
@@ -62,49 +74,42 @@ const ProjectGrid = ({content}) => {
     )
 
     return (
-        <>
-        <Masonry className="showcase"
-        style={style}>
-            {projectsWithoutNull.map((project) => (
-                <div className="showcase__item">
-                <figure className="card">
-                  <figcaption className="card__caption">
-                    <h2 className="card__title">
-                        {project.next.frontmatter.Title}
-                    </h2>
-                    <div className="card__description">
-                      <p>{project.next.frontmatter.Description}</p>
-                    </div>
-                    <Img fluid={data.file.childImageSharp.fluid}
-                    alt="A corgi smiling happily"></Img>
-                    <button className="card__githublink">
-                    <Link to={project.next.frontmatter.Githublink}>Github</Link>
-                    </button>
-                    <button className="card__githublink">
-                    <Link to={project.next.frontmatter.Demolink}>Demo</Link>
-                    </button>
+      <React.Fragment>
+      <CssBaseline />
 
-    
-                  </figcaption>
-                </figure>
-              </div>
-              ))}
-
-        </Masonry>
-        {/* <Grid>
-            {projectsWithoutNull.map(project => (
-                
-                <Col><Project project={project}></Project></Col>
-
-            ))}           
-        </Grid>
-        <Grid>
-               <Col><h1>hi</h1></Col>
-               <Col><h1>gi</h1></Col>
-               <Col><h1>hello</h1></Col>
-           </Grid> */}
-</>
+      <Container className='cardGrid' maxWidth="md">
+      <Grid container spacing={4}>
+        {projectsWithoutNull.map((project) => (
+          <Grid item key='card' xs={12} sm={6} md={4}>
+            <Card className='card'>
+              <CardMedia
+                className='cardMedia'
+                image="https://source.unsplash.com/random"
+                title="Image title"
+              ><Img fluid={data.file.childImageSharp.fluid}
+              alt="A corgi smiling happily"></Img></CardMedia>
+              <CardContent className='cardContent'>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {project.next.frontmatter.Title}
+                </Typography>
+                <Typography >
+                {project.next.frontmatter.Description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" color="primary">
+                  View
+                </Button>
+                <Button size="small" color="primary">
+                  Edit
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  </React.Fragment>
     )
-    
 }
 export default ProjectGrid

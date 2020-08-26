@@ -21,12 +21,16 @@ const StyledLayout = styled.div`
   }
 `
 
+
+
+
 const Layout = ({ children }) => {
   return (
     <StyledLayout>
       <GlobalStyle />
       <Header />
       <main id="main-content">{children}</main>
+
       <Footer />
     </StyledLayout>
   )
