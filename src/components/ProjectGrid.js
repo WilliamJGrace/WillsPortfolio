@@ -21,13 +21,7 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
   },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
+
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
@@ -90,12 +84,13 @@ const ProjectGrid = ({content}) => {
                 className='cardMedia'
                 image="https://source.unsplash.com/random"
                 title="Image title"
-              />
+              ><Img fluid={data.file.childImageSharp.fluid}
+              alt="A corgi smiling happily"></Img></CardMedia>
               <CardContent className='cardContent'>
                 <Typography gutterBottom variant="h5" component="h2">
                   {project.next.frontmatter.Title}
                 </Typography>
-                <Typography>
+                <Typography >
                 {project.next.frontmatter.Description}
                 </Typography>
               </CardContent>
