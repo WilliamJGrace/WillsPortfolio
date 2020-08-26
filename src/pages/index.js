@@ -10,7 +10,6 @@ const IndexPage = ({data}) => {
   return (
     <Layout>
       <About content={data.about.edges[0].node} />
-  
     </Layout>
   
   )
