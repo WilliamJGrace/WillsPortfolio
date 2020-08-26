@@ -1,7 +1,7 @@
 ---
 Title: "Acebook"
-Description: "Facebook Copy"
-Githublink: "https://github.com/Team-react/Playlist_App"
-Demolink: "https://road-to-discovery.herokuapp.com/"
+Description: "A Clone of the popular social media site. Built using Ruby on Rails."
+Githublink: "https://github.com/Untitled-Team-Acebook/acebook-Untitled-Team"
+Demolink: "https://acebook-untitled-team.herokuapp.com/"
 ---
 
