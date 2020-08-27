@@ -6,25 +6,25 @@ import { useStaticQuery, graphql } from "gatsby"
 
 
 const ProfilePic = () => {
-//     const data = useStaticQuery(graphql`
-// query MyQuery {
-//     file(relativePath: {eq: "ProfilePic.jpg"}) {
-//       childImageSharp {
-//         fluid {
-//           aspectRatio
-//           base64
-//           sizes
-//           src
-//         }
-//       }
-//     }
-//   }
-// `  
+    const data = useStaticQuery(graphql`
+query PhotoQuery {
+    file(relativePath: {eq: "ProfilePic.png"}) {
+      childImageSharp {
+        fluid {
+          aspectRatio
+          base64
+          sizes
+          src
+        }
+      }
+    }
+  }
+`  
 
-    // )
-    return 
-        // <Img fluid={data.file.childImageSharp.fluid}
-        // alt="A corgi smiling happily"></Img>
+    )
+    return (
+        <Img fluid={data.file.childImageSharp.fluid}
+        alt="A corgi smiling happily"></Img>)
     
 }
 
