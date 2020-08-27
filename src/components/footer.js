@@ -1,5 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -25,8 +28,12 @@ const Footer = () => (
       rel="nofollow noopener noreferrer"
       aria-label="External Link"
     >
-      <span role="img" aria-label="emoji">👏</span> Visit on GitHub
+      <span role="img" aria-label="emoji">👏</span> Get in Contact!
     </a>
+    <GitHubIcon fontSize="large"></GitHubIcon>
+    <LinkedInIcon fontSize="large"></LinkedInIcon>
+    <EmailIcon fontSize="large"></EmailIcon>
+
   </StyledFooter>
 )
 
