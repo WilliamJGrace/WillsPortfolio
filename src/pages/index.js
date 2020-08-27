@@ -9,29 +9,11 @@ import ProfilePic from '../components/profilePic'
 const IndexPage = ({data}) => {
   return (
     <Layout>
-      <About content={data.about.edges[0].node} />
+      <About />
     </Layout>
   
   )
 }
 
-export const pageQuery = graphql`
-  {
-    about: allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-            greetings
-            emoji
-            subtitlePrefix
-            subtitleHighlight
-          }
-          rawMarkdownBody
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage
