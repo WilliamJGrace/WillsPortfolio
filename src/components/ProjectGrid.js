@@ -103,7 +103,7 @@ const ProjectGrid = ({content}) => {
               </CardContent>
               <CardActions>
                 <Button size="small" color="primary">
-                  <Link to={project.next.frontmatter.GithubLink}>Github</Link>
+                  <Link to={project.next.frontmatter.Githublink}>Github</Link>
                 </Button>
                 <Button size="small" color="primary">
                   <Link to={project.next.frontmatter.Demolink}>Demo</Link>
