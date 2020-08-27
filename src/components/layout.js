@@ -15,7 +15,6 @@ const StyledLayout = styled.div`
   grid-template-columns: 100%;
   #main-content {
     width: 100%;
-    max-width: 62.5rem;
     margin: 0 auto;
     padding: 0 2.5rem;
   }
