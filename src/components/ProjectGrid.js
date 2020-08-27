@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   cardMedia: {
+    height: 0,
     paddingTop: '56.25%', // 16:9
   },
   cardContent: {
@@ -46,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
 
 
 const ProjectGrid = ({content}) => {
+  const classes = useStyles();
+
+
+
     let projects = content.allMarkdownRemark.edges
    
     let projectsWithoutNull = []
@@ -77,18 +82,18 @@ const ProjectGrid = ({content}) => {
       <React.Fragment>
       <CssBaseline />
 
-      <Container className='cardGrid' maxWidth="md">
+      <Container className={classes.cardGrid} width="md">
       <Grid container spacing={4}>
         {projectsWithoutNull.map((project) => (
           <Grid item key='card' xs={12} sm={6} md={4}>
-            <Card className='card'>
+            <Card className={classes.card}>
               <CardMedia
-                className='cardMedia'
-                image="https://source.unsplash.com/random"
+                className={classes.cardMedia}
+                image={project.next.frontmatter.Imglink}
+                // image="https://drive.google.com/file/d/https://lh3.googleusercontent.com/tu9521ecyqQb036SmzCsi2rZr6FiDeekIxcjdtOMveZUYNvqvW-FneUQmvPnzO9w_ODwr4qx4_h27lZaClWyHrKgpWtXIWbNMcYBtaxD18AFsSACwJfvkiz-jrLvxL_m7WSogU0-WPY-92EECCZV4CRdVrfJqZ52pM/view?https://photos.app.goo.gl/LJ2PM7TZ1FnDEATZ6=sharing"
                 title="Image title"
-              ><Img fluid={data.file.childImageSharp.fluid}
-              alt="A corgi smiling happily"></Img></CardMedia>
-              <CardContent className='cardContent'>
+              />
+              <CardContent className={classes.cardContent}>
                 <Typography gutterBottom variant="h5" component="h2">
                   {project.next.frontmatter.Title}
                 </Typography>
