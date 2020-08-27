@@ -85,7 +85,7 @@ const ProjectGrid = ({content}) => {
       <Container className={classes.cardGrid} width="md">
       <Grid container spacing={4}>
         {projectsWithoutNull.map((project) => (
-          <Grid item key='card' xs={12} sm={6} md={6}>
+          <Grid item key='card' xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
               <CardMedia
                 className={classes.cardMedia}
