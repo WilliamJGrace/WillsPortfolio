@@ -15,7 +15,6 @@ const StyledSection = styled.section`
 `
 
 const About = ({ content }) => {
-    const {frontmatter, rawMarkdownBody} = content
     return (
     <StyledSection id="hero">
     <h1 className="title">
