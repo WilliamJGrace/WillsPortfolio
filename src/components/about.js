@@ -19,18 +19,18 @@ const About = ({ content }) => {
     return (
     <StyledSection id="hero">
     <h1 className="title">
-      {frontmatter.greetings}{" "}
+      Hello{" "}
       <span role="img" aria-label="emoji">
-        {frontmatter.emoji}
+      👋
       </span>
       <br />
-      {frontmatter.title}
+      I'm a Software Developer{" "}
     </h1>
     <h2 className="subtitle">
-      {frontmatter.subtitlePrefix}{" "}
-      <span className="highlighted">{frontmatter.subtitleHighlight}</span>
+    I design, test, develop and deploy {" "}
+      <span className="highlighted">Full Stack Applications</span>
     </h2>
-    <div className="description">{rawMarkdownBody}</div>
+    <div className="description">JavaScript/React/Node.js/Express | MongoDB/PostgreSQL | Ruby/Ruby on Rails | RSpec/Jasmine/Jest/Enzyme</div>
   </StyledSection>
   )
 }

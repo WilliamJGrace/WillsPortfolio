@@ -1,5 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
+import Link from '@material-ui/core/Link';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -17,17 +23,32 @@ const StyledFooter = styled.footer`
   font-weight: 700;
 `
 
-const Footer = () => (
+const useStyles = makeStyles((theme) => ({
+  icon: {
+    margin: '5px'}
+
+  
+}))
+
+
+const Footer = () => {
+
+const classes = useStyles()
+
+
+
+return (
+
+
   <StyledFooter>
-    <a
-      href="https://github.com/konstantinmuenster/how-to-gatsby-portfolio"
-      target="_blank"
-      rel="nofollow noopener noreferrer"
-      aria-label="External Link"
-    >
-      <span role="img" aria-label="emoji">👏</span> Visit on GitHub
-    </a>
+
+    <Link color="inherit" href='https://www.linkedin.com/in/william-grace-b4b171b3/'><LinkedInIcon className={classes.icon} fontSize="large" ></LinkedInIcon></Link>
+    <Link color="inherit" href='https://github.com/WilliamJGrace'><GitHubIcon className={classes.icon} fontSize="large" ></GitHubIcon></Link>
+    <Link color="inherit" href='mailto:williamjgrace@outlook.com'><EmailIcon className={classes.icon} fontSize="large" ></EmailIcon></Link>
+
+
+
   </StyledFooter>
-)
+)}
 
 export default Footer
