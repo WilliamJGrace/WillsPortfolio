@@ -14,7 +14,7 @@ const StyledSection = styled.section`
   }
 `
 
-const About = () => {
+const About = ({ content }) => {
     return (
     <StyledSection id="hero">
     <h1 className="title">
