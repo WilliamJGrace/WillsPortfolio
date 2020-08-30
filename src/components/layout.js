@@ -16,7 +16,6 @@ const StyledLayout = styled.div`
   #main-content {
     width: 100%;
     margin: 0 auto;
-    padding: 0 2.5rem;
   }
 `
 
