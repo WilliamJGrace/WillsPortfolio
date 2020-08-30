@@ -21,6 +21,7 @@ const StyledFooter = styled.footer`
   text-transform: uppercase;
   letter-spacing: +1px;
   font-weight: 700;
+  
 `
 
 const useStyles = makeStyles((theme) => ({

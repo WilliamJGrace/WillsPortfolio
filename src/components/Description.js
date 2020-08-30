@@ -9,18 +9,19 @@ import { CssBaseline } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
     gridContainer: {
       marginTop: '100px',
-    marginBottom: '100px',
     maxWidth: '70.5rem',
     margin: 'auto',
     width: '100%',
+    
 },
 
     gridItem: {
         textAlign: 'center',
         margin: 'auto',
-        margin: 'auto',
-        padding: '0 2.5rem',
-        paddingTop: '50px'
+        padding: '0 1.5rem',
+        paddingTop: '50px',
+        paddingBottom: '50px'
+
     },
 
     header: {
@@ -31,9 +32,10 @@ const useStyles = makeStyles((theme) => ({
 
 
   const GridContainerDiv = styled.div`
-  height: 80vh;
   width: 100%;
+  height: auto;
   margin: 0 auto;
+  margin-bottom: 0px;
   padding: 0 2.5rem;
   background: #FCFFDB  ;
   align-items: center;
@@ -51,12 +53,16 @@ const Description = () => {
         <GridContainerDiv>
 
         <Grid className={classes.gridContainer} container>
-            <Grid item className={classes.gridItem} xs={12} sm={6} md={6}> 
+            <Grid item className={classes.gridItem} xs={12} sm={12} md={6}> 
         <ProfilePic/>
      </Grid>
-     <Grid item className={classes.gridItem}xs={12} sm={6} md={6}>
+     <Grid item className={classes.gridItem}xs={12} sm={12} md={6}>
          <h2 className={classes.header}>About Me</h2>
-         <div>I a BSc in Microbiology assistant London. However,  dg at Mind.</div>
+         <div>I am a recent graduate of Makers Academy, seeking a <b>Full Stack</b> or <b>Front End Software Developer role. </b> 
+             Since graduating with a <b>BSc</b> in Microbiology from the <b>University of Leeds</b>, I gained professional experience as a research assistant in a genetic lab in London.
+            However, I didn’t see myself spending the rest of my life in a lab coat, so I began learning to code. </div><div>
+            I switched to software development because I enjoy solving problems, learning new things and I want a career that challenges me.
+            Currently, I am building my client-facing, project management, and development skills volunteering at Mind.</div>
 
      </Grid>
 </Grid>
