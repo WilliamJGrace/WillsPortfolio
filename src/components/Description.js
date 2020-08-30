@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     gridItem: {
         textAlign: 'center',
         margin: 'auto',
-        paddingLeft: '5px',
         margin: 'auto',
         padding: '0 2.5rem',
         paddingTop: '50px'
@@ -52,12 +51,12 @@ const Description = () => {
         <GridContainerDiv>
 
         <Grid className={classes.gridContainer} container>
-            <Grid item className={classes.gridItem} xs={6}> 
+            <Grid item className={classes.gridItem} xs={12} sm={6} md={6}> 
         <ProfilePic/>
      </Grid>
-     <Grid item className={classes.gridItem}xs={6}>
+     <Grid item className={classes.gridItem}xs={12} sm={6} md={6}>
          <h2 className={classes.header}>About Me</h2>
-         <div>I a BSc in Microbiology assistant in a genetic lab in London. However, I dg at Mind.</div>
+         <div>I a BSc in Microbiology assistant London. However,  dg at Mind.</div>
 
      </Grid>
 </Grid>
