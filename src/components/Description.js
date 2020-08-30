@@ -60,9 +60,14 @@ const Description = () => {
          <h2 className={classes.header}>About Me</h2>
          <div>I am a recent graduate of Makers Academy, seeking a <b>Full Stack</b> or <b>Front End Software Developer role. </b> 
              Since graduating with a <b>BSc</b> in Microbiology from the <b>University of Leeds</b>, I gained professional experience as a research assistant in a genetic lab in London.
-            However, I didn’t see myself spending the rest of my life in a lab coat, so I began learning to code. </div><div>
-            I switched to software development because I enjoy solving problems, learning new things and I want a career that challenges me.
-            Currently, I am building my client-facing, project management, and development skills volunteering at Mind.</div>
+            However, I didn’t see myself spending the rest of my life in a lab coat, so I began learning to code. </div><br></br><div>
+            I switched to software development because I enjoy <b>solving problems</b>, <b>learning new things</b> and I want a career that <b>challenges me. </b>
+            </div><br></br>
+            <div>
+
+                Please take a look at my projects, and to get in touch use the links below 😎 
+
+            </div>
 
      </Grid>
 </Grid>
