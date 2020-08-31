@@ -2,7 +2,7 @@ import React from "react"
 import Grid from '@material-ui/core/Grid'
 import Container from "@material-ui/core/Container";
 import styled from "styled-components"
-import ProfilePic from '../components/profilePic'
+import ProfilePic from '../components/ProfilePic'
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from "@material-ui/core";
 
@@ -60,8 +60,8 @@ const Description = () => {
          <h2 className={classes.header}>About Me</h2>
          <div>I am a recent graduate of Makers Academy, seeking a <b>Full Stack</b> or <b>Front End Software Developer role. </b> 
              Since graduating with a <b>BSc</b> in Microbiology from the <b>University of Leeds</b>, I gained professional experience as a research assistant in a genetic lab in London.
-            However, I didn’t see myself spending the rest of my life in a lab coat, so I began learning to code. </div><br></br><div>
-            I switched to software development because I enjoy <b>solving problems</b>, <b>learning new things</b> and I want a career that <b>challenges me. </b>
+            However, I didn’t see myself spending the rest of my life in a lab coat.</div><br></br><div>
+            I switched to software development because I enjoy <b>solving problems</b>, <b>learning new things</b> and I enjoy working in an <b>collaborative environment me. </b>
             </div><br></br>
             <div>
 
