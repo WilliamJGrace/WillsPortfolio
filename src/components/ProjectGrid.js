@@ -9,10 +9,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import styled from 'styled-components'
-
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from "gatsby-image"
 import { Link } from 'gatsby'
 
 
@@ -60,21 +56,7 @@ const ProjectGrid = ({content}) => {
         }
 
     }
-    const data = useStaticQuery(graphql`
-    query MyQuery {
-        file(relativePath: {eq: "roadtodiscovery.png"}) {
-          childImageSharp {
-            fluid {
-              aspectRatio
-              base64
-              sizes
-              src
-            }
-          }
-        }
-      }
-    `  
-    )
+    
 
     return (
       <React.Fragment>
