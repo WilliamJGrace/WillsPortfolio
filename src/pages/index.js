@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import About from '../components/about'
 import Description from '../components/Description'
-import ProfilePic from '../components/profilePic'
 import styled from 'styled-components'
 
 const StyledLayoutAbout = styled.div`

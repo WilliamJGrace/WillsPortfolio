@@ -13,8 +13,6 @@ import styled from 'styled-components'
 
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
-import './ProjectGrid.css'
-import Project from './Project'
 import { Link } from 'gatsby'
 
 
