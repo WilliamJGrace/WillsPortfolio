@@ -1,10 +1,8 @@
 import React from "react"
 import Grid from '@material-ui/core/Grid'
-import Container from "@material-ui/core/Container";
 import styled from "styled-components"
 import ProfilePic from '../components/ProfilePic'
 import { makeStyles } from '@material-ui/core/styles';
-import { CssBaseline } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     gridContainer: {
@@ -49,7 +47,6 @@ const Description = () => {
     const classes = useStyles()
     return (
         <>
-        {/* <Container style={{ height: "100vh", width:'100%'}}> */}
         <GridContainerDiv>
 
         <Grid className={classes.gridContainer} container>
@@ -65,14 +62,15 @@ const Description = () => {
             </div><br></br>
             <div>
 
-                Please take a look at my projects, and to get in touch use the links below 😎 
+                Please take a look at my projects, and to get in touch use the links below  <span role="img" aria-label="emoji">
+                😎 
+      </span>
 
             </div>
 
      </Grid>
 </Grid>
 </GridContainerDiv>
-{/* </Container> */}
 </>
     )
 }
