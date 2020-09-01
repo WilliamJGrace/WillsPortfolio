@@ -56,7 +56,7 @@ const Description = () => {
      <Grid item className={classes.gridItem}xs={12} sm={12} md={6}>
          <h2 className={classes.header}>About Me</h2>
          <div>I am a recent graduate of Makers Academy, seeking a <b>Full Stack</b> or <b>Front End Software Developer role. </b> 
-             Since graduating with a <b>BSc</b> in Microbiology from the <b>University of Leeds</b>, I gained professional experience as a research assistant in a genetic lab in London.
+             Since graduating with a BSc in Microbiology from the <b>University of Leeds</b>, I gained professional experience as a <b>research assistant</b> in a genetic lab in London.
             However, I didn’t see myself spending the rest of my life in a lab coat.</div><br></br><div>
             I switched to software development because I enjoy <b>solving problems</b>, <b>learning new things</b> and I enjoy working in an <b>collaborative environment.</b>
             </div><br></br>
