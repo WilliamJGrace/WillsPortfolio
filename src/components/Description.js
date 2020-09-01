@@ -58,7 +58,7 @@ const Description = () => {
          <div>I am a recent graduate of Makers Academy, seeking a <b>Full Stack</b> or <b>Front End Software Developer role. </b> 
              Since graduating with a <b>BSc</b> in Microbiology from the <b>University of Leeds</b>, I gained professional experience as a research assistant in a genetic lab in London.
             However, I didn’t see myself spending the rest of my life in a lab coat.</div><br></br><div>
-            I switched to software development because I enjoy <b>solving problems</b>, <b>learning new things</b> and I enjoy working in an <b>collaborative environment me. </b>
+            I switched to software development because I enjoy <b>solving problems</b>, <b>learning new things</b> and I enjoy working in an <b>collaborative environment.</b>
             </div><br></br>
             <div>
 
