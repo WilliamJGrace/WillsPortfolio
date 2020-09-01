@@ -24,7 +24,7 @@ query PhotoQuery {
     )
     return (
         <Img fluid={data.file.childImageSharp.fluid}
-        alt="A corgi smiling happily"></Img>)
+        alt="ProfilePicture"></Img>)
     
 }
 

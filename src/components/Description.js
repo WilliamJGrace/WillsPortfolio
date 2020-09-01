@@ -1,10 +1,8 @@
 import React from "react"
 import Grid from '@material-ui/core/Grid'
-import Container from "@material-ui/core/Container";
 import styled from "styled-components"
 import ProfilePic from '../components/ProfilePic'
 import { makeStyles } from '@material-ui/core/styles';
-import { CssBaseline } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     gridContainer: {
@@ -49,7 +47,6 @@ const Description = () => {
     const classes = useStyles()
     return (
         <>
-        {/* <Container style={{ height: "100vh", width:'100%'}}> */}
         <GridContainerDiv>
 
         <Grid className={classes.gridContainer} container>
@@ -61,18 +58,19 @@ const Description = () => {
          <div>I am a recent graduate of Makers Academy, seeking a <b>Full Stack</b> or <b>Front End Software Developer role. </b> 
              Since graduating with a <b>BSc</b> in Microbiology from the <b>University of Leeds</b>, I gained professional experience as a research assistant in a genetic lab in London.
             However, I didn’t see myself spending the rest of my life in a lab coat.</div><br></br><div>
-            I switched to software development because I enjoy <b>solving problems</b>, <b>learning new things</b> and I enjoy working in an <b>collaborative environment me. </b>
+            I switched to software development because I enjoy <b>solving problems</b>, <b>learning new things</b> and I enjoy working in an <b>collaborative environment.</b>
             </div><br></br>
             <div>
 
-                Please take a look at my projects, and to get in touch use the links below 😎 
+                Please take a look at my projects, and to get in touch use the links below  <span role="img" aria-label="emoji">
+                😎 
+      </span>
 
             </div>
 
      </Grid>
 </Grid>
 </GridContainerDiv>
-{/* </Container> */}
 </>
     )
 }
