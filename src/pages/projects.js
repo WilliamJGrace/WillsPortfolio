@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from 'react-helmet';
+
 import Layout from '../components/layout'
 import ProjectGrid from '../components/ProjectGrid'
 
@@ -8,6 +10,10 @@ import ProjectGrid from '../components/ProjectGrid'
 
 const Projects = ({data}) => {
     return (
+      <>
+      <Helmet>
+      <title>Will Grace</title>
+    </Helmet>
      <Layout>
        
          <ProjectGrid content={data}>
@@ -15,6 +21,7 @@ const Projects = ({data}) => {
          </ProjectGrid>
 
     </Layout>
+    </>
     )
   }
 

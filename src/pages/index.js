@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import About from '../components/about'
 import Description from '../components/Description'
 import styled from 'styled-components'
+import { Helmet } from 'react-helmet';
 
 const StyledLayoutAbout = styled.div`
 
@@ -15,12 +16,17 @@ const StyledLayoutAbout = styled.div`
 
 const IndexPage = ({data}) => {
   return (
+    <>
+    <Helmet>
+      <title>Will Grace</title>
+    </Helmet>
     <Layout>
       <StyledLayoutAbout>
       <About content={data.about.edges[0].node} />
       </StyledLayoutAbout>
       <Description/>
     </Layout>
+    </>
   
   )
 }
