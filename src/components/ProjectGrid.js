@@ -55,6 +55,8 @@ const ProjectGrid = ({content}) => {
         }
 
     }
+
+    projectsWithoutNull = projectsWithoutNull.reverse()
     
 
     return (
@@ -84,9 +86,15 @@ const ProjectGrid = ({content}) => {
                 <Button size="small" color="primary">
                   <a href={project.next.frontmatter.Githublink}>Github</a>
                 </Button>
-                <Button size="small" color="primary">
-                <a href={project.next.frontmatter.Demolink}>Demo</a>
-                </Button>
+                {console.log(project.next.frontmatter.Demolink )}
+                {project.next.frontmatter.Demolink ?
+                 <Button size="small" color="primary">
+                 <a href={project.next.frontmatter.Demolink}>Demo</a>
+                 </Button>
+                 :
+                 null
+                }
+               
               </CardActions>
             </Card>
           </Grid>
