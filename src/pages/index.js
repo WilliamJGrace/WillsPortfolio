@@ -5,6 +5,8 @@ import About from '../components/about'
 import Description from '../components/Description'
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet';
+import favicon from '../favicon/favicon.ico';
+
 
 const StyledLayoutAbout = styled.div`
 
@@ -19,6 +21,8 @@ const IndexPage = ({data}) => {
     <>
     <Helmet>
       <title>Will Grace</title>
+      <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
+
     </Helmet>
     <Layout>
       <StyledLayoutAbout>
