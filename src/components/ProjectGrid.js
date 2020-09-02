@@ -55,6 +55,8 @@ const ProjectGrid = ({content}) => {
         }
 
     }
+
+    projectsWithoutNull = projectsWithoutNull.reverse()
     
 
     return (
