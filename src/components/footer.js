@@ -43,9 +43,9 @@ return (
 
   <StyledFooter>
 
-    <Link color="inherit" href='https://www.linkedin.com/in/william-grace-b4b171b3/'><LinkedInIcon className={classes.icon} fontSize="large" ></LinkedInIcon></Link>
-    <Link color="inherit" href='https://github.com/WilliamJGrace'><GitHubIcon className={classes.icon} fontSize="large" ></GitHubIcon></Link>
-    <Link color="inherit" href='mailto:williamjgrace@outlook.com'><EmailIcon className={classes.icon} fontSize="large" ></EmailIcon></Link>
+    <Link color="inherit" href='https://www.linkedin.com/in/william-grace-b4b171b3/' target="_blank"><LinkedInIcon className={classes.icon} fontSize="large" ></LinkedInIcon></Link>
+    <Link color="inherit" href='https://github.com/WilliamJGrace' target="_blank"><GitHubIcon className={classes.icon} fontSize="large" ></GitHubIcon></Link>
+    <Link color="inherit" href='mailto:williamjgrace@outlook.com' target="_blank"><EmailIcon className={classes.icon} fontSize="large" ></EmailIcon></Link>
 
 
 
