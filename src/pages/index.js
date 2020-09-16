@@ -23,6 +23,7 @@ const IndexPage = ({data}) => {
       <title>Will Grace</title>
       <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
       <link rel="canonical" href="https://www.willgrace.dev/" />
+      <meta property="image"content="../images/ProfilePic.png" />
 
 
     </Helmet>
