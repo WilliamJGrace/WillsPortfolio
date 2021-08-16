@@ -15,22 +15,22 @@ const StyledSection = styled.section`
 `
 
 const About = ({ content }) => {
-    return (
+  return (
     <StyledSection id="hero">
-    <h1 className="title">
-      Hello{" "}
-      <span role="img" aria-label="emoji">
-      👋
+      <h1 className="title">
+        Hello{" "}
+        <span role="img" aria-label="emoji">
+          👋
       </span>
-      <br />
+        <br />
       I'm a Software Developer{" "}
-    </h1>
-    <h2 className="subtitle">
-    I design, test, develop and deploy {" "}
-      <span className="highlighted">Full Stack Applications</span>
-    </h2>
-    <div className="description">JavaScript/React/Node.js/Express | MongoDB/PostgreSQL | Ruby/Ruby on Rails | RSpec/Jasmine/Jest/Enzyme</div>
-  </StyledSection>
+      </h1>
+      <h2 className="subtitle">
+        I design, test, develop and deploy {" "}
+        <span className="highlighted">Full Stack Applications</span>
+      </h2>
+      <div className="description">PHP/Laravel/Livewire | Alpine/JavaScript/React/Node.js/Express | HTML/CSS/SASS/Tailwind</div>
+    </StyledSection>
   )
 }
 

@@ -6,12 +6,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     gridContainer: {
-      marginTop: '100px',
-    maxWidth: '70.5rem',
-    margin: 'auto',
-    width: '100%',
-    
-},
+        marginTop: '100px',
+        maxWidth: '70.5rem',
+        margin: 'auto',
+        width: '100%',
+
+    },
 
     gridItem: {
         textAlign: 'center',
@@ -24,12 +24,12 @@ const useStyles = makeStyles((theme) => ({
 
     header: {
     }
-  
-    
-  }))
 
 
-  const GridContainerDiv = styled.div`
+}))
+
+
+const GridContainerDiv = styled.div`
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -47,32 +47,25 @@ const Description = () => {
     const classes = useStyles()
     return (
         <>
-        <GridContainerDiv>
+            <GridContainerDiv>
 
-        <Grid className={classes.gridContainer} container>
-            <Grid item className={classes.gridItem} xs={12} sm={12} md={6}> 
-        <ProfilePic/>
-     </Grid>
-     <Grid item className={classes.gridItem}xs={12} sm={12} md={6}>
-         <h2 className={classes.header}>About Me</h2>
-         <div>I am a graduate of Makers Academy, currently working as a <b>Full Stack</b> Web Developer at <b>Mumsnet. </b> </div>
-         <div><br></br>
+                <Grid className={classes.gridContainer} container>
+                    <Grid item className={classes.gridItem} xs={12} sm={12} md={6}>
+                        <ProfilePic />
+                    </Grid>
+                    <Grid item className={classes.gridItem} xs={12} sm={12} md={6}>
+                        <h2 className={classes.header}>About Me</h2>
+                        <div>I am a graduate of Makers Academy, currently working as a <b>Full Stack</b> Web Developer at <b>Mumsnet. </b> </div>
+                        <div><br></br>
              Since graduating with a BSc in Microbiology from the <b>University of Leeds</b>, I gained professional experience as a <b>research assistant</b> in a genetic lab in London.
             However, I didn’t see myself spending the rest of my life in a lab coat.</div><br></br><div>
-            I switched to software development because I enjoy <b>solving problems</b>, <b>learning new things</b> and working in a <b>collaborative environment.</b>
-            </div><br></br>
-            <div>
-
-                Please take a look at my projects, and to get in touch use the links below  <span role="img" aria-label="emoji">
-                😎 
-      </span>
-
-            </div>
-
-     </Grid>
-</Grid>
-</GridContainerDiv>
-</>
+                            I switched to software development because I enjoy <b>solving problems</b>, <b>learning new things</b> and working in a <b>collaborative environment.</b>
+                        </div><br></br>
+                        <div>Please take a look at my projects, and to get in touch use the links below  <span role="img" aria-label="emoji">😎</span></div>
+                    </Grid>
+                </Grid>
+            </GridContainerDiv>
+        </>
     )
 }
 

@@ -42,8 +42,6 @@ const useStyles = makeStyles((theme) => ({
 const ProjectGrid = ({content}) => {
   const classes = useStyles();
 
-
-
     let projects = content.allMarkdownRemark.edges
    
     let projectsWithoutNull = []
@@ -51,14 +49,11 @@ const ProjectGrid = ({content}) => {
     for(var i=0;i<projects.length;i++){
         if(projects[i].next !== null){
             projectsWithoutNull.push(projects[i])
-
         }
-
     }
 
     projectsWithoutNull = projectsWithoutNull.reverse()
     
-
     return (
       <React.Fragment>
       <CssBaseline />
@@ -71,7 +66,6 @@ const ProjectGrid = ({content}) => {
               <CardMedia
                 className={classes.cardMedia}
                 image={project.next.frontmatter.Imglink}
-                // image="https://drive.google.com/file/d/https://lh3.googleusercontent.com/tu9521ecyqQb036SmzCsi2rZr6FiDeekIxcjdtOMveZUYNvqvW-FneUQmvPnzO9w_ODwr4qx4_h27lZaClWyHrKgpWtXIWbNMcYBtaxD18AFsSACwJfvkiz-jrLvxL_m7WSogU0-WPY-92EECCZV4CRdVrfJqZ52pM/view?https://photos.app.goo.gl/LJ2PM7TZ1FnDEATZ6=sharing"
                 title="Image title"
               />
               <CardContent className={classes.cardContent}>
@@ -86,7 +80,6 @@ const ProjectGrid = ({content}) => {
                 <Button size="small" color="primary">
                   <a href={project.next.frontmatter.Githublink}>Github</a>
                 </Button>
-                {console.log(project.next.frontmatter.Demolink )}
                 {project.next.frontmatter.Demolink ?
                  <Button size="small" color="primary">
                  <a href={project.next.frontmatter.Demolink}>Demo</a>
