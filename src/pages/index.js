@@ -25,6 +25,10 @@ const IndexPage = ({data}) => {
       <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
       <link rel="canonical" href="https://www.willgrace.dev/" />
       <meta property="og:image" content={ogimage} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Will Grace's Portfolio" />
+      <meta property="og:description" content="Browse my latest projects." />
+
 
 
     </Helmet>
