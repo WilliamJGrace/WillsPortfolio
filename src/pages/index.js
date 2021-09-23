@@ -6,6 +6,7 @@ import Description from '../components/Description'
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet';
 import favicon from '../favicon/favicon.ico';
+import ogimage from '../images/ProfilePic.png';
 
 
 const StyledLayoutAbout = styled.div`
@@ -23,7 +24,7 @@ const IndexPage = ({data}) => {
       <title>Will Grace</title>
       <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
       <link rel="canonical" href="https://www.willgrace.dev/" />
-      <meta property="og:image"content="../images/ProfilePic.png" />
+      <meta property="og:image" content={ogimage} />
 
 
     </Helmet>
