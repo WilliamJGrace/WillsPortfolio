@@ -42,11 +42,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: `Will's Portfolio`,
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: 'A Full Stack Developer specialising in the TALL Stack',
         },
         {
           property: `og:type`,
